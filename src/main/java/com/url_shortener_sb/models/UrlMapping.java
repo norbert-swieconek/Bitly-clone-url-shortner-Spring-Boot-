@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -21,7 +22,7 @@ public class UrlMapping {
     private User user;
 
     @OneToMany(mappedBy = "urlMapping")
-    private List<ClickEvent> clicEvents;
+    private List<ClickEvent> clickEvents;
 
     public UrlMapping() {}
 
@@ -29,6 +30,7 @@ public class UrlMapping {
         this.originalUrl = originalUrl;
         this.shortUrl = shortUrl;
         this.createdDate = createdDate;
+        this.clickEvents = new ArrayList<>();
     }
 
     public Long getId() {
@@ -49,6 +51,10 @@ public class UrlMapping {
 
     public LocalDateTime getCreatedDate() {
         return this.createdDate;
+    }
+
+    public List<ClickEvent> getClickEvents() {
+        return this.clickEvents;
     }
 
     public void setOriginalUrl(String originalUrl) {
