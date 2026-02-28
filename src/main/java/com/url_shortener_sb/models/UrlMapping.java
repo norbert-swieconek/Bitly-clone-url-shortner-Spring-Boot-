@@ -1,8 +1,6 @@
 package com.url_shortener_sb.models;
 
 import jakarta.persistence.*;
-
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
