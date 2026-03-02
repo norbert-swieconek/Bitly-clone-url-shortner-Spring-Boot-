@@ -15,6 +15,7 @@ public class UrlMapping {
     private int clickCount = 0;
     private LocalDateTime createdDate;
 
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
@@ -70,4 +71,13 @@ public class UrlMapping {
     public void setCreatedDate(LocalDateTime createdDate) {
         this.createdDate = createdDate;
     }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public User getUser() {
+        return this.user;
+    }
+
 }
