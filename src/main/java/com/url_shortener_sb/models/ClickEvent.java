@@ -38,4 +38,8 @@ public class ClickEvent {
     public void setClickDate(LocalDateTime clickDate) {
         this.clickDate = clickDate;
     }
+
+    public void setUrlMapping(UrlMapping urlMapping) {
+        this.urlMapping = urlMapping;
+    }
 }
